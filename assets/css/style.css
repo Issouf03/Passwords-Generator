@@ -1,0 +1,21 @@
+body{
+    background: url(../images/darkness.png);
+}
+
+.container{
+    border-radius: 10px;
+}
+.shade{
+    background: lightgray;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+span{
+    margin: 0 10px;
+}
+
+btn{
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
