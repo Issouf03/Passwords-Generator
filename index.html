@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 
@@ -30,28 +29,31 @@
         </div>
     </nav>
 
-    <!-- main Content -->
-
+    <!-- Jumbotron -->
     <div class="jumbotron">
         <h1 class="display-4 text-center">Password Generator</h1>
         <h1 class="text-center">EASILY GENERATE STRONG, SECURE AND UNIQUE PASSWORD</h1>
     </div>
 
+    <!-- main Content -->
     <div class="container bg-light my-5 w-25 pb-3">
         <div class="row">
             <div class="col-md-12 col-sm-12 mx-auto content">
+                <!-- Display -->
                 <div class="form-group input-group-lg">
                     <input type="text" class="form-control mt-4" id="display" style="height: 70px; ">
                 </div>
                 <hr>
-                <div>Lenght:</div>
+                <!-- Slider -->
+                <div id="lenght">Lenght: 29 </div>
                 <div class="shade d-flex justify-content-center align-items-center">
                     <span>8</span>
-                    <input class="custom-range w-75" id="slider" type="range" data-slider-min="8" data-slider-max="64"
-                        data-slider-step="1" data-slider-value="28" />
+                    <input class="custom-range w-75" id="slider" type="range" min="8" max="64" step="1" value="8" />
                     <span>64</span>
                 </div>
-                <div>Settings</div>
+
+                <!-- Settings -->
+                <div>Criterias</div>
                 <div
                     class="shade custom-control custom-switch d-flex justify-content-between justify-content-center align-items-center p-1">
                     <span>Lowercase</span>
@@ -85,7 +87,7 @@
                     </div>
                 </div>
 
-
+                <!-- Buttons -->
                 <div class=" d-flex flex-column justify-content-center align-items-center">
                     <button type="button" class="btn btn-secondary btn-md btn-block rounded-pill w-75">Generate
                         Password</button>
@@ -93,13 +95,12 @@
                         Clipboard</button>
                 </div>
             </div>
-
         </div>
-
     </div>
 
-    </div>
-
+    <!-- my script -->
+    <script src="script.js"></script>
+    <!-- Bootstrap links -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
