@@ -16,14 +16,17 @@ slider.onkeydown = function() {
   sliderValue.innerHTML = "Lenght: " + slider.value;
 };
 
+// getting the generate btn and calling the generatePass function when btn is pressed.
 generate.onclick = generatePass;
+
+
 
 // Function to generate the password.
 function generatePass() {
 
     // Defining criterias
-    var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
-    var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var lowerCaseLetters = "abcdefghijklmnopqrstuvwxyz";
+    var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var allNumbers = "0123456789";
     var specialSymbols = "!@#$%^&*()_+";
 
@@ -46,18 +49,22 @@ function generatePass() {
     
     if (lower!== true && upper !== true && numbers !== true && symbols !== true){
         alert('Please select at least one criteria');
-    };
+    }
     if (lower === true){
-        criteria += lower;
-    };
+        criteria += lowerCaseLetters;
+    }
     if (upper === true){
-        criteria += upper;
-    };
+        criteria += upperCaseLetters;
+    }
     if (numbers === true){
-        criteria += numbers;
-    };
+        criteria += allNumbers;
+    }
     if (symbols === true){
-        criteria += symbols;
-    };
+        criteria += specialSymbols;
+    }
 
+    for ( var i = 1; i <= passwordLenght; ++i){
+        password += criteria.charAt(Math.floor(Math.random() * (criteria.length-1)));
+        console.log(password);
+    }
 };
